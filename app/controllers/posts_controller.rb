@@ -4,7 +4,9 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to 
-      
+      redirect_to shelter_path(@post.shelter)
+    else
+      redirect_to shelter_path(@post.shelter)
+    end
   end
 end
