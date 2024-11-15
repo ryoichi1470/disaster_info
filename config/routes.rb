@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'posts/create'
   get 'shelters/index'
   get 'shelters/show'
   devise_for :users
